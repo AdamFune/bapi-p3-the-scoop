@@ -1,0 +1,104 @@
+users:
+  hello:
+    username: hello
+    articleIds:
+      - 1
+      - 3
+    commentIds:
+      - 1
+      - 2
+      - 5
+      - 6
+  StartStop:
+    username: StartStop
+    articleIds:
+      - 2
+    commentIds:
+      - 3
+  Start stop:
+    username: Start stop
+    articleIds:
+      - 4
+    commentIds: []
+articles:
+  '1':
+    id: 1
+    title: Hello
+    url: cool
+    username: hello
+    commentIds:
+      - 1
+      - 2
+    upvotedBy:
+      - hello
+    downvotedBy: []
+    comments:
+      - &ref_0
+        id: 1
+        body: Everything seems to be working
+        username: hello
+        upvotedBy:
+          - hello
+        downvotedBy: []
+      - &ref_1
+        id: 2
+        body: >-
+          Like this as user: StopStart, if everything is being save
+          successfully!
+        username: hello
+  '2':
+    id: 2
+    title: Hello
+    url: sdfsdfd
+    username: StartStop
+    commentIds:
+      - 3
+    upvotedBy: []
+    downvotedBy: []
+    comments:
+      - &ref_2
+        id: 3
+        body: >
+          I can't access past comments, but everything seems to be saving
+          properly other than that
+        username: StartStop
+        upvotedBy:
+          - StartStop
+        downvotedBy: []
+  '3':
+    id: 3
+    title: sdfsdfdsfsdf
+    url: fsdfsdfsdfsdfsdfd
+    username: hello
+    commentIds:
+      - 5
+      - 6
+    upvotedBy: []
+    downvotedBy: []
+    comments:
+      - &ref_3
+        id: 5
+        body: sdfsdf
+        username: hello
+      - &ref_4
+        id: 6
+        body: Can you read this
+        username: hello
+  '4':
+    id: 4
+    title: Not seeing past articles
+    url: Werid
+    username: Start stop
+    commentIds: []
+    upvotedBy: []
+    downvotedBy: []
+    comments: []
+nextArticleId: 5
+comments:
+  '1': *ref_0
+  '2': *ref_1
+  '3': *ref_2
+  '4': null
+  '5': *ref_3
+  '6': *ref_4
+nextCommentId: 7
